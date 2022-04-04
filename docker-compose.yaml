@@ -1,0 +1,11 @@
+version: "3"
+services:
+    server:
+        build:
+            context: .
+            args:
+                - PROXY_USER=${PROXY_USER}
+                - PROXY_PASSWORD=${PROXY_PASSWORD}
+                - PROXY_PASSWORD_SALT=${PROXY_PASSWORD_SALT}
+        ports:
+            - 8081:3128
